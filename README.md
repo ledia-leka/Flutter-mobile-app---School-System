@@ -1,2 +1,2 @@
-# LMS
-Epoka LMS
+# Epoka eLearner
+
