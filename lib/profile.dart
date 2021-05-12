@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-  home: NinjaCard(),
-));
-
 class NinjaCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Profile',
-          style: TextStyle(
-              fontSize: 28.0,
-              fontWeight: FontWeight.bold
-          ),),
+        title: Text(
+          'Profile',
+          style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
         backgroundColor: Colors.blue,
         elevation: 0.0,
@@ -26,7 +21,7 @@ class NinjaCard extends StatelessWidget {
           children: <Widget>[
             Center(
               child: CircleAvatar(
-                backgroundImage: AssetImage('assets/ninja-favicon.png'),
+                backgroundImage: new AssetImage('assets/images/mm.jpg'),
                 radius: 40.0,
               ),
             ),
@@ -41,17 +36,20 @@ class NinjaCard extends StatelessWidget {
                 letterSpacing: 2.0,
               ),
             ),
-            SizedBox(height: 10.0,),
+            SizedBox(
+              height: 10.0,
+            ),
             Text(
               'Nos Qirjako',
               style: TextStyle(
                   color: Colors.blue,
                   letterSpacing: 2.0,
                   fontSize: 28.0,
-                  fontWeight: FontWeight.bold
-              ),
+                  fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10.0,),
+            SizedBox(
+              height: 10.0,
+            ),
             Text(
               'Epoka ID Number',
               style: TextStyle(
@@ -59,22 +57,24 @@ class NinjaCard extends StatelessWidget {
                 letterSpacing: 2.0,
               ),
             ),
-            SizedBox(height: 10.0,),
+            SizedBox(
+              height: 10.0,
+            ),
             Text(
               '8',
               style: TextStyle(
                   color: Colors.blue,
                   letterSpacing: 2.0,
                   fontSize: 28.0,
-                  fontWeight: FontWeight.bold
-              ),
+                  fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10.0),
             Text(
               'Gender',
               style: TextStyle(
                 color: Colors.black,
-                letterSpacing: 2.0,),
+                letterSpacing: 2.0,
+              ),
             ),
             SizedBox(height: 10.0),
             Text(
@@ -83,10 +83,11 @@ class NinjaCard extends StatelessWidget {
                   color: Colors.blue,
                   letterSpacing: 2.0,
                   fontSize: 28.0,
-                  fontWeight: FontWeight.bold
-              ),
+                  fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10.0,),
+            SizedBox(
+              height: 10.0,
+            ),
             Text(
               'Birthday',
               style: TextStyle(
@@ -101,38 +102,34 @@ class NinjaCard extends StatelessWidget {
                   color: Colors.blue,
                   letterSpacing: 2.0,
                   fontSize: 28.0,
-                  fontWeight: FontWeight.bold
-              ),
+                  fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 30.0),
             Row(
               children: <Widget>[
-                Icon(
-                    Icons.email,
-                    color: Colors.blue
-
+                Icon(Icons.email, color: Colors.blue),
+                SizedBox(
+                  width: 10.0,
                 ),
-                SizedBox(width: 10.0,),
                 Text(
                   'Nosqirjako@gmail.com',
                   style: TextStyle(
                     color: Colors.grey[850],
                     fontSize: 18.0,
                     letterSpacing: 1.0,
-
                   ),
                 ),
-
-                SizedBox(height: 30.0,),
-
+                SizedBox(
+                  height: 30.0,
+                ),
               ],
             )
-
           ],
         ),
       ),
     );
-  }}
+  }
+}
 
 class Test extends StatefulWidget {
   @override
@@ -145,6 +142,3 @@ class _TestState extends State<Test> {
     return Container();
   }
 }
-
-
-
