@@ -32,77 +32,81 @@ class Login extends StatelessWidget {
                       topRight: Radius.circular(50))),
               child: Padding(
                   padding: EdgeInsets.all(30),
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(height: 40),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.grey[50],
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Column(
-                          children: <Widget>[
-                            Container(
-                                padding: EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom:
-                                            BorderSide(color: Colors.grey))),
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                      hintText: "Enter Username",
-                                      hintStyle:
-                                          TextStyle(color: Colors.black)),
-                                )),
-                            Container(
-                                padding: EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom:
-                                            BorderSide(color: Colors.grey))),
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                      hintText: "Enter Password",
-                                      hintStyle:
-                                          TextStyle(color: Colors.black)),
-                                )),
-                            SizedBox(height: 40),
-                            Container(
-                                height: 50,
-                                margin: EdgeInsets.symmetric(horizontal: 50),
-                                decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    "Login",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(height: 40),
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.grey[50],
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                  padding: EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                      border: Border(
+                                          bottom:
+                                              BorderSide(color: Colors.grey))),
+                                  child: TextField(
+                                    style: TextStyle(color: Colors.black),
+                                    decoration: InputDecoration(
+                                        hintText: "Enter Username",
+                                        hintStyle:
+                                            TextStyle(color: Colors.black)),
+                                  )),
+                              Container(
+                                  padding: EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                      border: Border(
+                                          bottom:
+                                              BorderSide(color: Colors.grey))),
+                                  child: TextField(
+                                    style: TextStyle(color: Colors.black),
+                                    decoration: InputDecoration(
+                                        hintText: "Enter Password",
+                                        hintStyle:
+                                            TextStyle(color: Colors.black)),
+                                  )),
+                              SizedBox(height: 40),
+                              Container(
+                                  height: 50,
+                                  margin: EdgeInsets.symmetric(horizontal: 50),
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.circular(30),
                                   ),
-                                )),
-                            SizedBox(height: 20),
-                            Container(
-                                height: 50,
-                                margin: EdgeInsets.symmetric(horizontal: 30),
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[700],
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    "Login with Epoka Mail",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold),
+                                  child: Center(
+                                    child: Text(
+                                      "Login",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  )),
+                              SizedBox(height: 20),
+                              Container(
+                                  height: 50,
+                                  margin: EdgeInsets.symmetric(horizontal: 30),
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey[700],
+                                    borderRadius: BorderRadius.circular(30),
                                   ),
-                                ))
-                          ],
+                                  child: Center(
+                                    child: Text(
+                                      "Login with Epoka Mail",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ))
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ))),
         )
       ]),
