@@ -1,6 +1,7 @@
-// ignore: avoid_web_libraries_in_flutter
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'profile.dart';
+import 'login.dart';
 
 void main() {
   runApp(MyApp());
@@ -64,7 +65,8 @@ class _HomePageState extends State<HomePage> {
             child: ListView(
           children: <Widget>[
             new UserAccountsDrawerHeader(
-              currentAccountPicture: Icon(Icons.person_pin, size: 40, color: Colors.blueGrey),
+              currentAccountPicture:
+                  Icon(Icons.person_pin, size: 40, color: Colors.blueGrey),
               accountName: new Text(
                 'Name',
                 style: TextStyle(color: Colors.grey[700], fontSize: 25),
@@ -81,190 +83,200 @@ class _HomePageState extends State<HomePage> {
               leading: Icon(Icons.verified_user),
               title: Text('Profile'),
               onTap: () => {
-                Navigator.of(context).pop()
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NinjaCard()),
+                )
               },
             ),
             ListTile(
               leading: Icon(Icons.file_copy_outlined),
               title: Text('Courses'),
-              onTap: () => {
-                Navigator.of(context).pop()
-              },
+              onTap: () => {Navigator.of(context).pop()},
             ),
             ListTile(
               leading: Icon(Icons.sticky_note_2),
               title: Text('Interim/Grades'),
-              onTap: () => {
-                Navigator.of(context).pop()
-              },
+              onTap: () => {Navigator.of(context).pop()},
             ),
             ListTile(
               leading: Icon(Icons.check_box_outlined),
               title: Text('Attendance'),
-              onTap: () => {
-                Navigator.of(context).pop()
-              },
+              onTap: () => {Navigator.of(context).pop()},
             ),
             ListTile(
               leading: Icon(Icons.file_present),
               title: Text('Documents'),
-              onTap: () => {
-                Navigator.of(context).pop()
-              },
+              onTap: () => {Navigator.of(context).pop()},
             ),
             ListTile(
               leading: Icon(Icons.attach_money_outlined),
               title: Text('Finance'),
-              onTap: () => {
-                Navigator.of(context).pop()
-              },
+              onTap: () => {Navigator.of(context).pop()},
             ),
             ListTile(
               leading: Icon(Icons.calendar_today_rounded),
               title: Text('Timetable'),
-              onTap: () => {
-                Navigator.of(context).pop()
-              },
+              onTap: () => {Navigator.of(context).pop()},
             ),
             ListTile(
               leading: Icon(Icons.emoji_transportation),
               title: Text('Transport'),
-              onTap: () => {
-                Navigator.of(context).pop()
-              },
+              onTap: () => {Navigator.of(context).pop()},
             ),
             ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text('Logout'),
               onTap: () => {
-                Navigator.of(context).pop()
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Login()),
+                )
               },
             ),
           ],
         )),
-        body: Column(
-          children: [
-            Container(
-              color: Colors.grey[800],
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 3,
-              decoration: new BoxDecoration(
-                  image: new DecorationImage(
-                image: new AssetImage('assets\images\mm.jpg'),
-                fit: BoxFit.fill,
-              )),
-            ),
-            Container(
-                padding: EdgeInsets.all(20),
+        body: SingleChildScrollView(
+          // rregullon viewn
+          child: Column(
+            children: [
+              Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 2,
-                child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: <Widget>[
-                  Expanded(
-                      child: GridView.count(
-                    crossAxisCount: 3,
-                    primary: false,
-                    children: <Widget>[
-                      FlatButton(
-                          onPressed: () {},
-                          child: Column(children: <Widget>[
-                            Icon(Icons.person, size: 70, color: Colors.blue[300]),
-                            Text(
-                              "Profile",
-                              textScaleFactor: 1.5,
-                              style: TextStyle(
-                                fontSize: 8,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
-                          ])),
-                      FlatButton(
-                          onPressed: () {},
-                          child: Column(children: <Widget>[
-                            Padding(padding: EdgeInsets.all(5)),
-                            Icon(Icons.file_copy_outlined, size: 70, color: Colors.yellow[600]),
-                            Text(
-                              "Courses",
-                              textScaleFactor: 1.5,
-                              style: TextStyle(
-                                fontSize: 8,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
-                          ])),
-                      FlatButton(
-                          onPressed: () {},
-                          child: Column(children: <Widget>[
-                            Padding(padding: EdgeInsets.all(5)),
-                            Icon(Icons.sticky_note_2, size: 70, color: Colors.green),
-                            Text(
-                              "Interim",
-                              textScaleFactor: 1.5,
-                              style: TextStyle(
-                                fontSize: 8,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
-                          ])),
-                      FlatButton(
-                          onPressed: () {},
-                          child: Column(children: <Widget>[
-                            Padding(padding: EdgeInsets.all(5)),
-                            Icon(Icons.check_box_outlined, size: 70, color: Colors.purple),
-                            Text(
-                              "Attendance",
-                              textScaleFactor: 1.5,
-                              style: TextStyle(
-                                fontSize: 8,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
-                          ])),
-                      FlatButton(
-                          onPressed: () {},
-                          child: Column(children: <Widget>[
-                            Padding(padding: EdgeInsets.all(5)),
-                            Icon(Icons.file_present, size: 70, color: Colors.red),
-                            Text(
-                              "Documents",
-                              textScaleFactor: 1.5,
-                              style: TextStyle(
-                                fontSize: 8,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
-                          ])),
-                      FlatButton(
-                          onPressed: () {},
-                          child: Column(children: <Widget>[
-                            Padding(padding: EdgeInsets.all(5)),
-                            Icon(Icons.attach_money_rounded, size: 70, color: Colors.blue[300]),
-                            Text(
-                              "Finance",
-                              textScaleFactor: 1.5,
-                              style: TextStyle(
-                                fontSize: 8,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
-                          ])),
-                      FlatButton(
-                          onPressed: () {},
-                          child: Column(children: <Widget>[
-                            Padding(padding: EdgeInsets.all(5)),
-                            Icon(Icons.add_circle_outline, size: 70, color: Colors.amber[700]),
-                            Text(
-                              "Add shortcut",
-                              textScaleFactor: 1.5,
-                              style: TextStyle(
-                                fontSize: 8,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
-                          ]))
-                    ],
-                  ))
-                ])),
-          ],
+                height: MediaQuery.of(context).size.height / 3,
+                decoration: new BoxDecoration(
+                    color: Colors.grey[800],
+                    image: new DecorationImage(
+                      image: new AssetImage('assets/images/mm.jpg'),
+                      fit: BoxFit.fill,
+                    )),
+              ),
+              Container(
+                  padding: EdgeInsets.all(20),
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height / 2,
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Expanded(
+                            child: GridView.count(
+                          crossAxisCount: 3,
+                          primary: false,
+                          children: <Widget>[
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => NinjaCard()),
+                                  );
+                                },
+                                child: Column(children: <Widget>[
+                                  Icon(Icons.person,
+                                      size: 70, color: Colors.blue[300]),
+                                  Text(
+                                    "Profile",
+                                    textScaleFactor: 1.5,
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ])),
+                            TextButton(
+                                onPressed: () {},
+                                child: Column(children: <Widget>[
+                                  Padding(padding: EdgeInsets.all(5)),
+                                  Icon(Icons.file_copy_outlined,
+                                      size: 70, color: Colors.yellow[600]),
+                                  Text(
+                                    "Courses",
+                                    textScaleFactor: 1.5,
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ])),
+                            TextButton(
+                                onPressed: () {},
+                                child: Column(children: <Widget>[
+                                  Padding(padding: EdgeInsets.all(5)),
+                                  Icon(Icons.sticky_note_2,
+                                      size: 70, color: Colors.green),
+                                  Text(
+                                    "Interim",
+                                    textScaleFactor: 1.5,
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ])),
+                            TextButton(
+                                onPressed: () {},
+                                child: Column(children: <Widget>[
+                                  Padding(padding: EdgeInsets.all(5)),
+                                  Icon(Icons.check_box_outlined,
+                                      size: 70, color: Colors.purple),
+                                  Text(
+                                    "Attendance",
+                                    textScaleFactor: 1.5,
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ])),
+                            TextButton(
+                                onPressed: () {},
+                                child: Column(children: <Widget>[
+                                  Padding(padding: EdgeInsets.all(5)),
+                                  Icon(Icons.file_present,
+                                      size: 70, color: Colors.red),
+                                  Text(
+                                    "Documents",
+                                    textScaleFactor: 1.5,
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ])),
+                            TextButton(
+                                onPressed: () {},
+                                child: Column(children: <Widget>[
+                                  Padding(padding: EdgeInsets.all(5)),
+                                  Icon(Icons.attach_money_rounded,
+                                      size: 70, color: Colors.blue[300]),
+                                  Text(
+                                    "Finance",
+                                    textScaleFactor: 1.5,
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ])),
+                            TextButton(
+                                onPressed: () {},
+                                child: Column(children: <Widget>[
+                                  Padding(padding: EdgeInsets.all(5)),
+                                  Icon(Icons.add_circle_outline,
+                                      size: 70, color: Colors.amber[700]),
+                                  Text(
+                                    "Add shortcut",
+                                    textScaleFactor: 1.5,
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ]))
+                          ],
+                        ))
+                      ])),
+            ],
+          ),
         ),
         bottomNavigationBar: Row(
           children: <Widget>[
@@ -295,8 +307,10 @@ class _HomePageState extends State<HomePage> {
                 //  color: index == _selectedItem ? Colors.red : Colors.white70);
               )
             : BoxDecoration(),
-        child: Icon(icon, color: index == _selectedItem ? Colors.red : Colors.grey[350]),
+        child: Icon(icon,
+            color: index == _selectedItem ? Colors.red : Colors.grey[350]),
       ),
     );
   }
 }
+
