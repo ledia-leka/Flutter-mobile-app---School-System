@@ -1,3 +1,5 @@
+import 'package:epokalearner/attendance.dart';
+import 'package:epokalearner/grades.dart';
 import 'package:epokalearner/profile.dart';
 import 'package:flutter/material.dart';
 
@@ -66,7 +68,14 @@ class Home extends StatelessWidget {
                               )
                             ])),
                         FlatButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Grades(),
+                                ),
+                              );
+                            },
                             child: Column(children: <Widget>[
                               Padding(padding: EdgeInsets.all(5)),
                               Icon(Icons.sticky_note_2,
@@ -81,7 +90,14 @@ class Home extends StatelessWidget {
                               )
                             ])),
                         FlatButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Attendance(),
+                                ),
+                              );
+                            },
                             child: Column(children: <Widget>[
                               Padding(padding: EdgeInsets.all(5)),
                               Icon(Icons.check_box_outlined,
@@ -148,3 +164,4 @@ class Home extends StatelessWidget {
     );
   }
 }
+
