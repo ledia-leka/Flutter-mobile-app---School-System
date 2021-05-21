@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() {runApp(MyApp());}
 
-class MyApp extends StatefulWidget {
-  @override
-  Grades createState() => Grades();
-}
-
-class Grades extends State<MyApp> {
+class Grades extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
