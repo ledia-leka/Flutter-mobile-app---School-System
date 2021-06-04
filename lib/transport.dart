@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {runApp(MyApp());}
-
-class MyApp extends StatefulWidget {
-  @override
-  Timetable createState() => Timetable();
-}
-
-class Timetable extends State<MyApp> {
+class Transport extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,40 +11,42 @@ class Timetable extends State<MyApp> {
           body: ListView(children: <Widget>[
             Center(
                 child: Text(
-                  'TIRANA CENTER - EPOKA CAMPUS',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: Colors.blue[700]),
-                )),
+              'TIRANA CENTER - EPOKA CAMPUS',
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue[700]),
+            )),
             DataTable(
               columns: [
-                DataColumn(label: Text(
-                    'No.',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
-                )),
-                DataColumn(label: Text(
-                    'MON ',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
-                )),
-                DataColumn(label: Text(
-                    'TUE ',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
-                )),
-                
-                DataColumn(label: Text(
-                    'WED',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
-                )),
-                DataColumn(label: Text(
-                    'THU',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
-                )),
-                DataColumn(label: Text(
-                    'FRI ',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
-                )),
-                DataColumn(label: Text(
-                    'SAT',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
-                )),
+                DataColumn(
+                    label: Text('No.',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold))),
+                DataColumn(
+                    label: Text('MON ',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold))),
+                DataColumn(
+                    label: Text('TUE ',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold))),
+                DataColumn(
+                    label: Text('WED',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold))),
+                DataColumn(
+                    label: Text('THU',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold))),
+                DataColumn(
+                    label: Text('FRI ',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold))),
+                DataColumn(
+                    label: Text('SAT',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold))),
               ],
               rows: [
                 DataRow(cells: [
@@ -62,9 +57,8 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('7:40')),
                   DataCell(Text('7:40')),
                   DataCell(Text('')),
-                  
-                  
-                ]), DataRow(cells: [
+                ]),
+                DataRow(cells: [
                   DataCell(Text('staff only')),
                   DataCell(Text('7:45')),
                   DataCell(Text('7:45')),
@@ -72,10 +66,7 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('7:45')),
                   DataCell(Text('7:45')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
-                
                 DataRow(cells: [
                   DataCell(Text('2')),
                   DataCell(Text('9:40')),
@@ -84,8 +75,6 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('9:40')),
                   DataCell(Text('9:40')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('3')),
@@ -95,8 +84,6 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('4')),
@@ -106,9 +93,8 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
-                ]),DataRow(cells: [
+                ]),
+                DataRow(cells: [
                   DataCell(Text('5')),
                   DataCell(Text('')),
                   DataCell(Text('')),
@@ -116,8 +102,6 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('6')),
@@ -127,8 +111,6 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('7')),
@@ -138,8 +120,6 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('8')),
@@ -149,8 +129,6 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('9')),
@@ -160,8 +138,6 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('10')),
@@ -171,8 +147,6 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('11')),
@@ -182,8 +156,6 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('12')),
@@ -193,10 +165,8 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
-                 DataRow(cells: [
+                DataRow(cells: [
                   DataCell(Text('13')),
                   DataCell(Text('')),
                   DataCell(Text('')),
@@ -204,10 +174,8 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
-                 DataRow(cells: [
+                DataRow(cells: [
                   DataCell(Text('14')),
                   DataCell(Text('')),
                   DataCell(Text('')),
@@ -215,10 +183,8 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
-                 DataRow(cells: [
+                DataRow(cells: [
                   DataCell(Text('15')),
                   DataCell(Text('')),
                   DataCell(Text('')),
@@ -226,22 +192,14 @@ class Timetable extends State<MyApp> {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                  
-                  
                 ]),
-               
               ],
             ),
-            
             Divider(
               height: 60.0,
               color: Colors.grey[800],
             ),
-            
-          
-            
-          ])
-      ),
+          ])),
     );
   }
 }
