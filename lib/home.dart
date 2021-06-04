@@ -1,7 +1,11 @@
+import 'package:epokalearner/IFrameView.dart';
 import 'package:epokalearner/attendance.dart';
 import 'package:epokalearner/grades.dart';
 import 'package:epokalearner/profile.dart';
+import 'package:epokalearner/timetable.dart';
+import 'package:epokalearner/transport.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -10,15 +14,9 @@ class Home extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            color: Colors.grey[800],
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 3,
-            decoration: new BoxDecoration(
-                image: new DecorationImage(
-              image: new AssetImage('assets/images/logo.png'),
-              fit: BoxFit.fill,
-            )),
-          ),
+              child: IframeView(source: "http://epoka.edu.al/"),
+              width: MediaQuery.of(context).size.width * 1.2,
+              height: MediaQuery.of(context).size.height * 4 / 9),
           Container(
               padding: EdgeInsets.all(20),
               width: MediaQuery.of(context).size.width,
@@ -127,6 +125,50 @@ class Home extends StatelessWidget {
                               )
                             ])),
                         FlatButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Transport(),
+                                ),
+                              );
+                            },
+                            child: Column(children: <Widget>[
+                              Padding(padding: EdgeInsets.all(5)),
+                              Icon(Icons.emoji_transportation,
+                                  size: 70, color: Colors.yellow),
+                              Text(
+                                "Transport",
+                                textScaleFactor: 1.5,
+                                style: TextStyle(
+                                  fontSize: 8,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              )
+                            ])),
+                        FlatButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Timetable(),
+                                ),
+                              );
+                            },
+                            child: Column(children: <Widget>[
+                              Padding(padding: EdgeInsets.all(5)),
+                              Icon(Icons.calendar_today_rounded,
+                                  size: 70, color: Colors.blueGrey),
+                              Text(
+                                "Timetable",
+                                textScaleFactor: 1.5,
+                                style: TextStyle(
+                                  fontSize: 8,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              )
+                            ])),
+                        FlatButton(
                             onPressed: () {},
                             child: Column(children: <Widget>[
                               Padding(padding: EdgeInsets.all(5)),
@@ -164,4 +206,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
