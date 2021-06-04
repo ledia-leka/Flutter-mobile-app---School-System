@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class Transport extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -7,46 +8,97 @@ class Transport extends StatelessWidget {
       home: Scaffold(
           appBar: AppBar(
             title: Text('Transport Timetable'),
+           
           ),
           body: ListView(children: <Widget>[
+          Center(
+       
+                child: Text(
+                  '',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: Colors.blue[700]),
+                )),
+ 
+  new Container
+                (
+                  child:Row(
+                    children:<Widget>[
+
+                     new FloatingActionButton.extended(
+                        onPressed: () {
+                          // Add your onPressed code here!
+                        },
+                        label: Text('Tirana-Campus'),
+                        backgroundColor: Colors.blue,
+                      ),
+                      new FloatingActionButton.extended(
+                        onPressed: () {
+                          // Add your onPressed code here!
+                        },
+                        label: Text('Campus-Tirana'),
+                        backgroundColor: Colors.blue,
+                      ),
+                      new FloatingActionButton.extended(
+                        onPressed: () {
+                          // Add your onPressed code here!
+                        },
+                        label: Text('Durrës-Campus'),
+                        backgroundColor: Colors.blue,
+                      ),
+                      new FloatingActionButton.extended(
+                        onPressed: () {
+                          // Add your onPressed code here!
+                        },
+                        label: Text('Cumpus-Durrës'),
+                        backgroundColor: Colors.blue,
+                      ),
+                     
+                       Column(children: <Widget>[
+        Center(child: Icon(Icons.directions_transit)),
+      ]),   
+                       
+              ])
+        ),
             Center(
                 child: Text(
-              'TIRANA CENTER - EPOKA CAMPUS',
-              style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue[700]),
-            )),
+                  '',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: Colors.blue[700]),
+                )),
+       Center(
+                child: Text(
+                  'TIRANA CENTER - EPOKA CAMPUS',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: Colors.blue[700]),
+                )),
             DataTable(
               columns: [
-                DataColumn(
-                    label: Text('No.',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold))),
-                DataColumn(
-                    label: Text('MON ',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold))),
-                DataColumn(
-                    label: Text('TUE ',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold))),
-                DataColumn(
-                    label: Text('WED',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold))),
-                DataColumn(
-                    label: Text('THU',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold))),
-                DataColumn(
-                    label: Text('FRI ',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold))),
-                DataColumn(
-                    label: Text('SAT',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold))),
+                DataColumn(label: Text(
+                    'No.',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
+                )),
+                DataColumn(label: Text(
+                    'MON ',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
+                )),
+                DataColumn(label: Text(
+                    'TUE ',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
+                )),
+                
+                DataColumn(label: Text(
+                    'WED',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
+                )),
+                DataColumn(label: Text(
+                    'THU',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
+                )),
+                DataColumn(label: Text(
+                    'FRI ',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
+                )),
+                DataColumn(label: Text(
+                    'SAT',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
+                )),
               ],
               rows: [
                 DataRow(cells: [
@@ -57,8 +109,9 @@ class Transport extends StatelessWidget {
                   DataCell(Text('7:40')),
                   DataCell(Text('7:40')),
                   DataCell(Text('')),
-                ]),
-                DataRow(cells: [
+                  
+                  
+                ]), DataRow(cells: [
                   DataCell(Text('staff only')),
                   DataCell(Text('7:45')),
                   DataCell(Text('7:45')),
@@ -66,7 +119,10 @@ class Transport extends StatelessWidget {
                   DataCell(Text('7:45')),
                   DataCell(Text('7:45')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
+                
                 DataRow(cells: [
                   DataCell(Text('2')),
                   DataCell(Text('9:40')),
@@ -75,6 +131,8 @@ class Transport extends StatelessWidget {
                   DataCell(Text('9:40')),
                   DataCell(Text('9:40')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('3')),
@@ -84,6 +142,8 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('4')),
@@ -93,8 +153,9 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
-                ]),
-                DataRow(cells: [
+                  
+                  
+                ]),DataRow(cells: [
                   DataCell(Text('5')),
                   DataCell(Text('')),
                   DataCell(Text('')),
@@ -102,6 +163,8 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('6')),
@@ -111,6 +174,8 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('7')),
@@ -120,6 +185,8 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('8')),
@@ -129,6 +196,8 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('9')),
@@ -138,6 +207,8 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('10')),
@@ -147,6 +218,8 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('11')),
@@ -156,6 +229,8 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
                 DataRow(cells: [
                   DataCell(Text('12')),
@@ -165,8 +240,10 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
-                DataRow(cells: [
+                 DataRow(cells: [
                   DataCell(Text('13')),
                   DataCell(Text('')),
                   DataCell(Text('')),
@@ -174,8 +251,10 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
-                DataRow(cells: [
+                 DataRow(cells: [
                   DataCell(Text('14')),
                   DataCell(Text('')),
                   DataCell(Text('')),
@@ -183,8 +262,10 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
-                DataRow(cells: [
+                 DataRow(cells: [
                   DataCell(Text('15')),
                   DataCell(Text('')),
                   DataCell(Text('')),
@@ -192,14 +273,22 @@ class Transport extends StatelessWidget {
                   DataCell(Text('')),
                   DataCell(Text('')),
                   DataCell(Text('')),
+                  
+                  
                 ]),
+               
               ],
             ),
+            
             Divider(
               height: 60.0,
               color: Colors.grey[800],
             ),
-          ])),
+            
+          
+            
+          ])
+      ),
     );
   }
 }
