@@ -1,14 +1,13 @@
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:ui';
 // ignore: unused_import
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:ui';
-// ignore: unused_import
 import 'package:epokalearner/attendance.dart';
 import 'package:epokalearner/grades.dart';
 import 'package:epokalearner/home.dart';
 import 'package:epokalearner/profile.dart';
+import 'package:epokalearner/timetable.dart';
 import 'package:epokalearner/to-do.dart';
+import 'package:epokalearner/transport.dart';
 import 'package:flutter/material.dart';
 import 'package:epokalearner/to-do.dart';
 
@@ -118,7 +117,7 @@ class _HomePageState extends State<HomePage> {
           ListTile(
             leading: Icon(Icons.sticky_note_2),
             title: Text('Interim/Grades'),
-              onTap: () {
+            onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -130,7 +129,7 @@ class _HomePageState extends State<HomePage> {
           ListTile(
             leading: Icon(Icons.check_box_outlined),
             title: Text('Attendance'),
-              onTap: () {
+            onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -152,12 +151,26 @@ class _HomePageState extends State<HomePage> {
           ListTile(
             leading: Icon(Icons.calendar_today_rounded),
             title: Text('Timetable'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Timetable(),
+                ),
+              )
+            },
           ),
           ListTile(
             leading: Icon(Icons.emoji_transportation),
             title: Text('Transport'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Transport(),
+                ),
+              )
+            },
           ),
           ListTile(
             leading: Icon(Icons.exit_to_app),
